@@ -1,7 +1,7 @@
 {
   "name": "logjr_autosort",
   "version": "1.0.0",
-  "description": "Boilerplate for npm modules with ES6 features and syntax",
+  "description": "Auto sort a playlist of audio files based on tempo and energy",
   "main": "./lib/index.js",
   "scripts": {
     "clean": "rimraf lib",
@@ -21,22 +21,22 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flexdinesh/npm-module-boilerplate.git"
+    "url": "git+https://github.com/retiutut/LogJr_AutoSortPlaylist.git"
   },
   "keywords": [
-    "boilerplate",
     "npm",
     "module",
     "node",
     "javascript"
   ],
-  "author": "Dinesh Pandiyan <flexdinesh@gmail.com>",
+  "author": "Richard Waltman",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/flexdinesh/npm-module-boilerplate/issues"
+    "url": "https://github.com/retiutut/LogJr_AutoSortPlaylist/issues"
   },
-  "homepage": "https://github.com/flexdinesh/npm-module-boilerplate#readme",
+  "homepage": "https://github.com/retiutut/LogJr_AutoSortPlaylist#readme",
   "dependencies": {
+    "brain.js": "^2.0.0-alpha.12",
     "csvtojson": "^2.0.10",
     "directory-tree": "^2.2.4"
   },
