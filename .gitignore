@@ -1,2 +1,3 @@
 node_modules
 playlist_databases/*
+.nyc_output/
