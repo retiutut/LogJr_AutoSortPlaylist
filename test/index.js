@@ -37,11 +37,11 @@ describe('Find file paths for song names', () => {
       path: elem.path,
       name: elem.name,
       metadata: elem.metadata,
-      mixedinkey: database.filter(object => object['File name'] === elem.metadata.title)
+      mixedinkey: database.find(object => object['File name'] === elem.metadata.title)
     }));
-    const viewAll = await inspectJSON(complete);
+    // const viewAll = await inspectJSON(complete);
     // eslint-disable-next-line no-console
-    console.log(viewAll);
+    console.log(complete);
     assert.isTrue(isAO(mappedDatabase));
     assert.isTrue(isAO(complete));
   });
