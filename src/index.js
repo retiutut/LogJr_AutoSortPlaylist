@@ -14,21 +14,33 @@ const directoryToJson = () => dirTree('/Users/Richard/Documents/GitHub/LogJr_Aut
   extensions: /\.(mp3|wav|aiff|wma|flac)$/
 });
 
-const mapToJson = () => {
-  const newObject2 = directoryToJson().children.map(elem => ({
-    path: elem.path,
-    name: elem.name,
-  }));
-  console.log(newObject2);
-  mm.parseFile('/Users/Richard/Documents/GitHub/LogJr_AutoSortPlaylist/playlist_databases/3195246_Home_Kollektiv_Turmstrasse___Interstellar_Mix.mp3')
-    .then((metadata) => {
-      console.log(util.inspect(metadata, { showHidden: false, depth: null }));
-    })
-    .catch((err) => {
-      console.error(err.message);
-    });
-};
+async function getMetaData(path) {
+  try {
+    const { common, format } = await mm.parseFile(path);
+    return {
+      title: common.title,
+      artist: common.artist,
+      album: common.album,
+      year: common.year,
+      duration: Math.floor(format.duration),
+    };
+  } catch (e) {
+    return {};
+  }
+}
+
+
+const mapToJson = () => Promise.all(directoryToJson().children.map(async elem => ({
+  path: elem.path,
+  name: elem.name,
+  metadata: await getMetaData(elem.path),
+  mixedinkey: (await csvToJson())
+})));
+
+async function inspectJSON(database) {
+  return util.inspect(database, { showHidden: false, depth: null, colors: true });
+}
 
 export {
-  csvToJson, directoryToJson, mapToJson
+  csvToJson, directoryToJson, mapToJson, inspectJSON
 };
