@@ -3,7 +3,7 @@ const csvFilePath = '/Users/Richard/Documents/GitHub/LogJr_AutoSortPlaylist/play
 const csv = require('csvtojson');
 const dirTree = require('directory-tree');
 
-const csvToJson = async () => csv().fromFile(csvFilePath);
+const csvToJson = () => csv().fromFile(csvFilePath);
 
 const directoryToJson = () => dirTree('/Users/Richard/Documents/GitHub/LogJr_AutoSortPlaylist/playlist_databases', {
   extensions: /\.(mp3|wav|aiff|wma|flac)$/
