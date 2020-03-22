@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 import isAO from './helpers';
-import { csvToJson, directoryToJson } from '../src/index';
+import { csvToJson, directoryToJson, mapToJson } from '../src/index';
 import { runNN } from '../src/neuralNetTest';
 
 
@@ -20,8 +20,17 @@ describe('Convert Directory and CSV to JSON for processing.', () => {
     // eslint-disable-next-line no-console
     console.log(database);
     // eslint-disable-next-line no-console
-    console.log(directory);
+    // console.log(directory);
     assert.isTrue(isAO(database), 'CSV is not valid JSON');
     assert.isTrue(isAO(directory), 'Directory is not valid JSON');
+  });
+});
+
+describe('Find file paths for song names', () => {
+  it('Should match a song name with available files, or return null for no match.', () => {
+    const mappedDatabase = mapToJson();
+    // eslint-disable-next-line no-console
+    console.log(mappedDatabase);
+    assert.isTrue(true);
   });
 });
