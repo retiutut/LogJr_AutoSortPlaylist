@@ -1,11 +1,11 @@
 import { assert } from 'chai';
 import isAO from './helpers';
 import {
-  csvToJson, directoryToJson, mapToJson, inspectJSON
+  csvToJson, directoryToJson, mapToJson
 } from '../src/index';
 import { runNN } from '../src/neuralNetTest';
 
-/*
+
 describe('Neural Net Test', () => {
   it('Should perform a basic test on the neural net', () => {
     const result = runNN(1, 0.2, 0);
@@ -14,7 +14,6 @@ describe('Neural Net Test', () => {
     assert.isTrue(result.black <= 0.04 && result.white >= 0.96, "Something went wrong with the neural network :'(");
   });
 });
-*/
 
 describe('Convert Directory and CSV to JSON for processing.', () => {
   it('Should output two JSONs', async () => {
