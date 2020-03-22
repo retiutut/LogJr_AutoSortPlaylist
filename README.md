@@ -1,6 +1,6 @@
 # NPM Module Boilerplate
 
-[![Build Status](https://travis-ci.org/flexdinesh/npm-module-boilerplate.svg?branch=master)](https://travis-ci.org/flexdinesh/npm-module-boilerplate) [![dependencies Status](https://david-dm.org/retiutut/LogJr_AutoSortPlaylist/status.svg)](https://david-dm.org/retiutut/LogJr_AutoSortPlaylist) [![devDependencies Status](https://david-dm.org/retiutut/LogJr_AutoSortPlaylist/dev-status.svg)](https://david-dm.org/flexdinesh/npm-module-boilerplate?type=dev) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.com/retiutut/LogJr_AutoSortPlaylist.svg?token=BwT1syTkL5zAh37i7XTo&branch=master)](https://travis-ci.org/retiutut/LogJr_AutoSortPlaylist) [![dependencies Status](https://david-dm.org/retiutut/LogJr_AutoSortPlaylist/status.svg)](https://david-dm.org/retiutut/LogJr_AutoSortPlaylist) [![devDependencies Status](https://david-dm.org/retiutut/LogJr_AutoSortPlaylist/dev-status.svg)](https://david-dm.org/flexdinesh/npm-module-boilerplate?type=dev) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
 
