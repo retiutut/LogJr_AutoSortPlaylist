@@ -1,4 +1,4 @@
 node_modules
-playlist_databases/*
+playlist_database/*
 .nyc_output/
 coverage/

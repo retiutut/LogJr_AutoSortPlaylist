@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import isAO from './helpers';
 import {
-  csvToJson, directoryToJson, mapToJson
+  csvToJson, directoryToJson, mapToJson, saveToM3U, readM3U
 } from '../src/index';
 import { runNN } from '../src/neuralNetTest';
 
@@ -16,7 +16,7 @@ describe('Neural Net Test', () => {
 });
 
 describe('Convert Directory and CSV to JSON for processing.', () => {
-  it('Should output two JSONs', async () => {
+  it('Should output two Arrays', async () => {
     const database = await csvToJson();
     const directory = directoryToJson();
     // eslint-disable-next-line no-console
@@ -43,5 +43,17 @@ describe('Find file paths for song names', () => {
     console.log(complete);
     assert.isTrue(isAO(mappedDatabase));
     assert.isTrue(isAO(complete));
+  });
+});
+
+describe('Output valid m3u8 playlist', () => {
+  it('Should save a valid m3u8 playlist to playlist_database', () => {
+    saveToM3U();
+
+    const data = readM3U();
+    // eslint-disable-next-line no-console
+    console.log(data); // May need to use a m3u8 parser to improve this test
+    console.log('^^^^^^^END OF FILE');
+    assert.isTrue(data != null);
   });
 });
