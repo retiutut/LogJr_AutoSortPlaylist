@@ -14,7 +14,7 @@ const directoryToJson = () => dirTree('/Users/Richard/Documents/GitHub/LogJr_Aut
   extensions: /\.(mp3|wav|aiff|wma|flac)$/
 });
 
-async function getMetaData(path) {
+const getMetaData = async (path) => {
   try {
     const { common, format } = await mm.parseFile(path);
     return {
@@ -27,7 +27,7 @@ async function getMetaData(path) {
   } catch (e) {
     return {};
   }
-}
+};
 
 
 const mapToJson = () => Promise.all(directoryToJson().children.map(async elem => ({
@@ -37,9 +37,8 @@ const mapToJson = () => Promise.all(directoryToJson().children.map(async elem =>
   mixedinkey: (await csvToJson())
 })));
 
-async function inspectJSON(database) {
-  return util.inspect(database, { showHidden: false, depth: null, colors: true });
-}
+// eslint-disable-next-line max-len
+const inspectJSON = async database => util.inspect(database, { showHidden: false, depth: null, colors: true });
 
 export {
   csvToJson, directoryToJson, mapToJson, inspectJSON

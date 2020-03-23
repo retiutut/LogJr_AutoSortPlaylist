@@ -2,7 +2,7 @@ const brain = require('brain.js');
 
 const net = new brain.NeuralNetwork();
 
-function trainNN() {
+const trainNN = () => {
   net.train([{
     input: {
       r: 0.03,
@@ -34,7 +34,7 @@ function trainNN() {
     }
   }
   ]);
-}
+};
 
 const runNN = (red, green, blue) => {
   trainNN();
