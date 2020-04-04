@@ -32,11 +32,11 @@ describe('Find file paths for song names', () => {
   it('Should match a song name with available files, or return null for no match.', async () => {
     const database = await csvToJson();
     const mappedDatabase = await mapToJson();
-    const complete = mappedDatabase.map(elem => ({
+    const complete = mappedDatabase.map((elem) => ({
       path: elem.path,
       name: elem.name,
       metadata: elem.metadata,
-      mixedinkey: database.find(object => object['File name'] === elem.metadata.title)
+      mixedinkey: database.find((object) => object['File name'] === elem.metadata.title)
     }));
     // const viewAll = await inspectJSON(complete);
     // eslint-disable-next-line no-console
