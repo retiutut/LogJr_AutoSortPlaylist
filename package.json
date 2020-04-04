@@ -1,6 +1,6 @@
 {
   "name": "logjr_autosort",
-  "version": "0.7.0",
+  "version": "0.0.7",
   "description": "Auto sort a playlist of audio files based on tempo and energy",
   "main": "./lib/index.js",
   "scripts": {
@@ -39,7 +39,8 @@
     "brain.js": "^2.0.0-alpha.12",
     "csvtojson": "^2.0.10",
     "directory-tree": "^2.2.4",
-    "music-metadata": "^6.3.6"
+    "music-metadata": "^6.3.6",
+    "music-tempo": "^1.0.3"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
