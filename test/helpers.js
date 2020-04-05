@@ -21,6 +21,6 @@ const isValidJSON = (jsonString) => {
 */
 
 // ES2015
-const isAO = val => (!!(val instanceof Array || val instanceof Object));
+const isAO = (val) => (!!(val instanceof Array || val instanceof Object));
 
 export default isAO;

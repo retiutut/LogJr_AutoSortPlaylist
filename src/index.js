@@ -32,7 +32,7 @@ const getMetaData = async (path) => {
 };
 
 
-const mapToJson = () => Promise.all(directoryToJson().children.map(async elem => ({
+const mapToJson = () => Promise.all(directoryToJson().children.map(async (elem) => ({
   path: elem.path,
   name: elem.name,
   metadata: await getMetaData(elem.path),
@@ -40,7 +40,7 @@ const mapToJson = () => Promise.all(directoryToJson().children.map(async elem =>
 })));
 
 // eslint-disable-next-line max-len
-const inspectJSON = async database => util.inspect(database, { showHidden: false, depth: null, colors: true });
+const inspectJSON = async (database) => util.inspect(database, { showHidden: false, depth: null, colors: true });
 
 const saveToM3U = () => {
   const writeStream = fs.createWriteStream('/Users/Richard/Documents/GitHub/LogJr_AutoSortPlaylist/playlist_database/output_playlist.m3u8');

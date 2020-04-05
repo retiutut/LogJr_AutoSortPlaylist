@@ -49,4 +49,4 @@ const runNN = (red, green, blue) => {
   return output;
 };
 
-export default { trainNN, runNN };
+export { trainNN, runNN };
