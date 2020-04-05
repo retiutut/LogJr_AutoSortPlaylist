@@ -53,6 +53,7 @@ describe('Output valid m3u8 playlist', () => {
     const data = readM3U();
     // eslint-disable-next-line no-console
     console.log(data); // May need to use a m3u8 parser to improve this test
+    // eslint-disable-next-line no-console
     console.log('^^^^^^^END OF FILE');
     assert.isTrue(data != null);
   });
