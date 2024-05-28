@@ -39,7 +39,7 @@
     "brain.js": "^2.0.0-alpha.12",
     "csvtojson": "^2.0.10",
     "directory-tree": "^2.2.4",
-    "music-metadata": "^6.3.7",
+    "music-metadata": "^7.14.0",
     "music-tempo": "^1.0.3"
   },
   "devDependencies": {
